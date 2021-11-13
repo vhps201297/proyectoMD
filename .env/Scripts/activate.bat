@@ -33,4 +33,4 @@ if defined _OLD_CODEPAGE (
     set _OLD_CODEPAGE=
 )
 
-REM set "FLASK_APP=app.py" //& ::Descomentar cuando se necesite cambiar el nombre del programa principal
+set "FLASK_APP=/templates/app.py" 

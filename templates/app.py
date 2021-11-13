@@ -8,4 +8,4 @@ def pca():
 
 @app.route('/')
 def home():
-    return render_template("templates/index.html", None)
+    return render_template("index.html", None)
