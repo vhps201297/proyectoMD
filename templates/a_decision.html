@@ -1,0 +1,68 @@
+{% extends 'base_layout.html'%}
+
+{% block content%}
+
+<div id="content">
+    <br>
+    <div class="container">
+
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h1 mb-1 text-gray-800">Árboles de decisión</h1>
+        </div>
+    
+        <div class="row">
+            <div class="col-lg-12 mb-4">       
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Contexto</h6>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Construir estructura jerárquica eficiente y escalable que divide los datos en función de
+                        determinadas condiciones. Para esto se utiliza la estrategia: divide y vencerás.
+                        <br>
+                        Su estructura consta de:
+                        <ul>
+                            <li>
+                                <b>Nodo principal.</b>  Representa toda la población(todos los datos) que posteriormente se dividirá.
+                                También cuenta como un nodo de decisión.
+                            </li>
+                            <li>
+                                <b>Nodo de decisión.</b> Se encarga de dividir los datos,
+                                dependiendo de una decisión, por ejemplo, ’Peso’,
+                                mayores de 50kg y menores o iguales a 50kg. Se toman dos caminos.
+                            </li>
+                            <li>
+                                <b>Nodo hoja.</b>  Es donde recae la decisión final. Por ejemplo, si una persona tiene diabetes o no.
+                            </li>
+                                <b>Profundidad.</b> La profundidad indica los niveles que
+                                tiene el árbol de decisión.
+
+                        </ul>
+                    </p>
+                    <div class="text-center">
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;"
+                            src="" alt="">
+                    </div>
+                </div>
+            </div>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 mb-4">       
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">implementación</h6>
+                </div>
+                <div class="card-body">
+                    
+                </div>
+            </div>
+            </div> 
+        </div>
+        </div>
+        <!-- /.container-fluid -->
+
+</div>
+{% endblock %}

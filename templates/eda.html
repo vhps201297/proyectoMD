@@ -7,17 +7,37 @@
     <div class="container">
 
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h1 mb-1 text-gray-800">Especificaciones</h1>
+            <h1 class="h1 mb-1 text-gray-800">EDA (Análisis exploratorio de datos)</h1>
         </div>
     
         <div class="row">
             <div class="col-lg-12 mb-4">       
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Descripción</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Contexto</h6>
                 </div>
                 <div class="card-body">
-                    
+                    <p>
+                        Se enfoca en tener una idea de la estructura del conjunto de datos, identificar la variable objetivo y posibles técnicas de modelado.
+                        Es útil también revisar la descripción de los datos para comprender lo que significa cada
+                        característica. EDA permite identificar las técnicas estadísticas correctas tanto para analizar como para pronosticar los datos.
+                        Se dividen en dos tipos básicos de técnicas:
+                        <ul>
+                            <li>Técnicas gráficas.</li>
+                            <li>Técnicas cuantitativas.</li>
+                        </ul>
+                        
+                        Para las técnicas gráficas se busca mostrar las propiedades clave dentro de un conjunto de datos, con un formato que convenga dicho análisis. Se utilizan diversas técnicas gráficas, entre las más utilizadas y recomendadas se encuentran los diagramas de caja y los histogramas.
+                        Para las técnicas cuantitativas se tiene un método un poco más riguroso para la obtención de las propiedades clave.
+                        <br>
+                        Entre los pasos principales se encuentran:
+                        <ul>
+                            <li>Paso 1: Descripción de la estructura de los datos.</li>
+                            <li>Paso 2: Identificación de datos faltantes.</li>
+                            <li>Paso 3: Detección de valores atípicos.</li>
+                            <li>Paso 4: Identificación de relaciones entre pares variables.</li>
+                        </ul>
+                    </p>
                     <div class="text-center">
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;"
                             src="" alt="">
@@ -29,18 +49,26 @@
 
         <div class="row">
             <div class="col-lg-12 mb-4">       
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">implementación</h6>
-                </div>
-                <div class="card-body">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">implementación</h6>
+                    </div>
+                    <div class="card-body">
+
+                        
+                        
+                    </div>
                     
                 </div>
             </div>
-            </div> 
+        </div> 
+        <div class="custom-file col-4 ml-2">
+            <input name="file" id="file" type="file" class="custom-file-input" lang="es" accept=".xls,.xlsx, .csv, .txt">
+            <label class="custom-file-label" for="file">Seleccionar Archivo</label>
+            <div class="invalid-feedback">Archivo inválido</div>
         </div>
-        </div>
-        <!-- /.container-fluid -->
-
+    </div>
 </div>
-{% endblock%}
+
+
+{% endblock %}

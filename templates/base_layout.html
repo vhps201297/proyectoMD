@@ -8,7 +8,7 @@
     <title>MD-Proyecto</title>
 
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
-    <script src="/static/js/bootstrap.min.js"></script>
+    
     <!--<link href="{{ url_for('static',filename='css/all.min.css')}}" rel="stylesheet" type="text/css">-->
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -18,10 +18,10 @@
 <body>
     <div id="app" class="d-flex flex-column justify-content-between h-screen">
         <header>
-            <nav class="navbar navbar-light navbar-expand-md bg-white shadow-sm">
+            <nav class="navbar navbar-light navbar-expand-md bg-light shadow-sm">
         
                 <div class="container">
-                    <a class="navbar-brand" href="#">Minería de Datos</a> 
+                    <a class="navbar-brand" href="/">Minería de Datos</a> 
         
                     <button class="navbar-toggler" type="button" 
                         data-toggle="collapse" 
@@ -35,23 +35,25 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav nav-pills">
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Inicio</a>
+                                <a class="nav-link" href="/">Inicio</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="./eda.html">EDA</a>
+                                <a class="nav-link" href="eda">EDA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="select_caract">
+                                Selección de características
+                                </a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Selección de características</a>
+                                <a class="nav-link" href="clustering">Clustering</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Clustering</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#">Reglas de asociación</a>
+                                <a class="nav-link" href="re_asociacion">Reglas de asociación</a>
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Árboles de decisión</a>
+                                <a class="nav-link" href="a_decision">Árboles de decisión</a>
                             </li>
                             
                         </ul>
@@ -68,6 +70,7 @@
         </footer>
     </div>
 
-    
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>
