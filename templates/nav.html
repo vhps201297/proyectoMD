@@ -1,0 +1,46 @@
+{% extends "base_layout.html"%}
+
+{% block navbartop%}
+    <nav class="navbar navbar-dark navbar-expand-md bg-primary shadow-sm">
+        
+        <div class="container">
+            <a class="navbar-brand" href="#">Minería de Datos</a> 
+
+            <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-pills">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">EDA</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Selección de características</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Clustering</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Reglas de asociación</a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Árboles de decisión</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+
+{% endblock%}
