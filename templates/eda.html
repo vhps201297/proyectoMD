@@ -1,4 +1,4 @@
-{% extends 'base_layout.html' %}
+{% extends "base_layout.html" %}
 
 {% block content %}
 
@@ -58,31 +58,44 @@
 
                         <form id="form-read-eda" method="POST" enctype="multipart/form-data">
                             <div class="custom-file col-4 ml-2">
-                                <input id="file-eda" type="file" class="custom-file-input" lang="es" accept=".xls,.xlsx, .csv, .txt">
-                                <label class="custom-file-label" for="file-eda">Seleccionar Archivo</label>
+                                <label class="custom-file-label" for="file-eda">Selecciona un Archivo</label>
+                                <input name="file-eda" id="file-eda" type="file" class="custom-file-input" lang="es" accept=".csv, .txt">
+                                
                                 <div class="invalid-feedback">Archivo inválido</div>
-                                <button id="btn-init" class="btn btn-primary">Iniciar</button>
                             </div>
+                            <br>
+                            <fieldset>
+                                <button type="button" id="btn-init" class="btn btn-primary">Iniciar</button>
+                            </fieldset>
+                            
                         </form>
-
-                        <div id="table-eda" display="block">
+                        <br>
+                        <div id="table-eda"  display="block" class="stripe" >
                         </div>
+                        <br>
 
                         <h4>Descripcion de la estructura de datos.</h4>
-                        <div id="dtype" display="block">
+                        <div id="dtype" display="block" class="stripe">
                         </div>
+                        <br>
 
                         <h4>identificacion de datos faltantes.</h4>
                         <div id="faltantes" display="block">
                         </div>
+                        <br>
 
-                        <h4>Deteccion de valores atiupicos.</h4>
+                        <h4>Deteccion de valores atipicos.</h4>
                         <div id="histograma" display="block">
                         </div>
+                        <div id="describe" display="block">
+                        </div>
+                        <br>
                         
                         <h4>Identificación de relaciones entre pares variables</h4>
                         <div id="corr" display="block">
                         </div>
+                        <br>
+
                     </div>
                     
                 </div>

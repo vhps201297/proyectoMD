@@ -1,14 +1,18 @@
 $(document).ready(function(){
-    $('btn-init').click((event)=>{
-        var data = new FormData($('#form-data-eda')[0]);
+
+    $('#btn-init').click(function(event){
+        event.preventDefault();
+        var data = new FormData($('#form-read-eda')[0]);
+        console.log(data);
         $.ajax({
-            url: '/analisis-eda',
-            data: form_data,
+            url: '/edaanalisis',
+            data: data,
             type: 'POST',
             contentType: false,
             processData: false,
             success: function(response){
-                $("#features-container").css("display","block");
+                //$("#features-container").css("display","block");
+                /*
                 var tabla_completa = response[0];
                 var shape = "<p><b>Shape: </b>"+response[1]+"</p>";
                 var type = "<p><b>Types: </b>"+response[2]+"</p>";
@@ -17,10 +21,42 @@ $(document).ready(function(){
                 var imagen_heap = response[5];
                 var imagen_heap_inf = response[6];
                 var imagen_heap_sup = response[7];
-                var labels = response[8];
-                $("#tabla_data").html(response[0]);
+                var labels = response[8];*/
+                $("#table-eda").html(response['eda-table']);
+                $("#eda-t").DataTable({ 
+                    responsive: true,
+                });
+                $("#dtype").html(response["dtype"]);
+                $("#eda-dtype").DataTable({ 
+                    "paging": false,
+                    "ordering": false,
+                    "info": false
+                });
+                $("#faltantes").html(response["faltantes"]);
+                $("#eda-null").DataTable({ 
+                    "paging": false,
+                    "ordering": false,
+                    "info": false
+                });
+
+
+                $("#describe").html(response["describe"]);
+                $("#eda-desc").DataTable({ 
+                    "paging": false,
+                    "ordering": false,
+                    "info": false
+                });
+
+                $("#corr").html(response["corr"]);
+                $("#eda-corr").DataTable({ 
+                    "paging": false,
+                    "ordering": false,
+                    "info": false
+                });
+                
                 //$("#shape").html(response[1]);
-                $("#dtype").html(response[2]);
+                /*
+                
                 $("#faltantes").html(response[3]);
                 //$("#relation_values").html(response[4]);
                 $("#heap").html(response[5]);
@@ -39,10 +75,11 @@ $(document).ready(function(){
                     } );
                 }
                 $("#js-loader").css("display","none");
+                */
                 console.log(response);
             },
             error: function(error){
-                console.log(response);
+                console.log(error);
             }
         });
     });
