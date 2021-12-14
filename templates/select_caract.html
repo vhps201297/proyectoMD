@@ -45,25 +45,72 @@
                     <h6 class="m-0 font-weight-bold text-primary">implementación</h6>
                 </div>
                 <div class="card-body">
-                    <div>
 
-                    </div>
-                    <div class="custom-file col-4 ml-2">
-                        <input id="file-data" name="file-data" type="file-data" class="custom-file-input" lang="es" accept=".csv, .txt">
-                        <label class="custom-file-label" for="file-data">Seleccione el Archivo</label>
-                    </div>
+                    <form id="form-read-sc" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file col-4 ml-2">
+                            <label class="custom-file-label" for="file-sc">Selecciona un Archivo</label>
+                            <input name="file-sc" id="file-sc" type="file" class="custom-file-input" lang="es" accept=".csv, .txt">
+                            <div class="invalid-feedback">Archivo inválido</div>
+                        </div>
+                        <br>
+                        <fieldset>
+                            <button type="button" id="btn-init-sc" class="btn btn-primary">Iniciar</button>
+                        </fieldset>
+                    </form>
+                    <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Análisis de correlacional de datos
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="check-corr"checked>
+                        <label class="form-check-label" for="check-corr">
+                            Análisis correlacional de datos
                         </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
+                    </div>
+                    <div class="form-check" hidden>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="check-pca" >
+                        <label class="form-check-label" for="chec-pca">
                             Análisis de componentes principales
                         </label>
-                      </div>
+                    </div>
+
+                    <div id="analisis-sc">
+                        <div id="table-sc"   class="stripe" >
+                        </div>
+                        <br>
+
+                        <h4>Descripcion de la estructura de datos.</h4>
+                        <div id="sc-dtype" display="block" class="stripe">
+                        </div>
+                        <br>
+
+                        <div id="sc-faltantes" display="block">
+                        </div>
+                        <br>
+                        
+                        <h4>identificacion de relaciones entre variables.</h4>
+                        <div id="sc-corr" display="block">
+                        </div>
+
+                        <div id="sc-heapmap" display="block">
+                        </div>
+                        <br>
+
+                    </div>
+
+                    <div id="analisis-pca">
+                        <div id="table-sc"   class="stripe" >
+                        </div>
+                        <br>
+
+                        <h4>Estandarización de los datos.</h4>
+                        <div id="sc-dtype" display="block" class="stripe">
+                        </div>
+                        <br>
+                        
+                        <h4>Matriz de correlaciones.</h4>
+                        <div id="sc-corr" display="block">
+                        </div>
+                        <br>
+                    </div>
+
                 </div>
             </div>
             </div> 
